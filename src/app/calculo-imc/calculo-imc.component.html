@@ -1,0 +1,39 @@
+<main class="content">
+    <div class="container">
+        <form action="#" method="get" onsubmit="return calculaImc()">
+            <h1>
+                IMC
+            </h1>
+            <p>
+                <label for="txtNome">Nome: </label>
+                <input type="text" id="txtNome" name="txtNome" [(ngModel)]="nome">
+            </p>
+
+            <fieldset>
+                <legend>Escolha o Sexo</legend>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="masculino" value="m" />
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="sexo" id="feminino" value="f" />
+            </fieldset>
+
+            <div>
+                <label for="txtPeso">Peso: </label>
+                <input type="number" id="txtPeso" name="txtPeso" [(ngModel)]="peso" />
+                <p>{{peso}}</p>
+                <label for="txtAltura">Altura: </label>
+                <input type="double" id="txtAltura" name="txtAltura" [(ngModel)]="altura">
+                <p>{{altura}}</p>
+
+            </div>
+            <div>
+                <button [disabled]="peso==0 && altura==0" (click)="calculaImc()">Calcula IMC</button>
+                <p>Nome: {{nome}}</p>
+                <p>Calculo IMC: {{imc}}</p>
+            </div>
+            <div class="menu">
+                <p><a href="menu.html">Voltar</a></p>
+            </div>
+        </form>
+    </div>
+</main>
