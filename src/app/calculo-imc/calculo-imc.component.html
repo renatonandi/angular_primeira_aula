@@ -12,9 +12,9 @@
             <fieldset>
                 <legend>Escolha o Sexo</legend>
                 <label for="masculino">Masculino</label>
-                <input type="radio" name="sexo" id="masculino" value="m" />
+                <input type="radio" name="sexo" id="masculino" value="m" [(ngModel)]="sexo"/>
                 <label for="feminino">Feminino</label>
-                <input type="radio" name="sexo" id="feminino" value="f" />
+                <input type="radio" name="sexo" id="feminino" value="f" [(ngModel)]="sexo"/>
             </fieldset>
 
             <div>
@@ -26,13 +26,16 @@
                 <p>{{altura}}</p>
 
             </div>
+            <div id="button">
+                <button [disabled]="peso==0 || peso==null || altura==0 || altura==null || sexo==''" (click)="calculaImc()">Calcula IMC</button>
+            </div>
             <div>
-                <button [disabled]="peso==0 && altura==0" (click)="calculaImc()">Calcula IMC</button>
                 <p>Nome: {{nome}}</p>
                 <p>Calculo IMC: {{imc}}</p>
+                <p>{{resultado}}</p>
             </div>
-            <div class="menu">
-                <p><a href="menu.html">Voltar</a></p>
+            <div>
+                <img [src]="urlImg()" alt="">
             </div>
         </form>
     </div>
