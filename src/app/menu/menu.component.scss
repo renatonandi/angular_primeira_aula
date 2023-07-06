@@ -1,0 +1,47 @@
+.linkSelected{
+    font-weight: bold;
+}
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    padding: 2px;
+}
+
+a:hover, a:active{
+    background-color: red;
+    transform: scale(1.2);
+    border-radius: 3px;
+}
+
+#menu{
+    width: 500px;
+    position: fixed;
+    top: 150px;
+    color: white;
+    transition: 0.5s;
+    left: -150px;
+}
+
+#menu-lateral{
+    position: relative;
+    width: 150px;
+    height: 300px;
+    background: black;
+    border-radius: 0px 20px 20px 0px;
+   
+}
+.titulo{
+    text-align: center;
+    
+}
+input:checked~#menu {
+    left: 0px;
+    transition: 0.5s;
+}
+button:checked~#menu{
+    left: 0px;
+}
+

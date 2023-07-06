@@ -1,6 +1,6 @@
 <main class="content">
-    <div class="container">
-        <form action="#" method="get" onsubmit="return calculaImc()">
+    <div >
+        <div class="form" onsubmit="return calculaImc()">
             <h1>
                 IMC
             </h1>
@@ -12,9 +12,9 @@
             <fieldset>
                 <legend>Escolha o Sexo</legend>
                 <label for="masculino">Masculino</label>
-                <input type="radio" name="sexo" id="masculino" value="m" [(ngModel)]="sexo"/>
+                <input type="radio" name="sexo" id="masculino" value="m" [(ngModel)]="sexo" />
                 <label for="feminino">Feminino</label>
-                <input type="radio" name="sexo" id="feminino" value="f" [(ngModel)]="sexo"/>
+                <input type="radio" name="sexo" id="feminino" value="f" [(ngModel)]="sexo" />
             </fieldset>
 
             <div>
@@ -27,16 +27,17 @@
 
             </div>
             <div id="button">
-                <button [disabled]="peso==0 || peso==null || altura==0 || altura==null || sexo==''" (click)="calculaImc()">Calcula IMC</button>
+                <button [disabled]="peso==0 || peso==null || altura==0 || altura==null || sexo==''"
+                    (click)="calculaImc()">Calcula IMC</button>
             </div>
             <div>
                 <p>Nome: {{nome}}</p>
                 <p>Calculo IMC: {{imc}}</p>
                 <p>{{resultado}}</p>
+                <img [src]="imagem" alt="">
             </div>
             <div>
-                <img [src]="urlImg()" alt="">
             </div>
-        </form>
+        </div>
     </div>
 </main>
