@@ -37,9 +37,8 @@ export class CalculoImcComponent {
       this.resultado = 'Seu peso está em grau de obesidade'
       this.imagem = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdSHnE54MtCppXLbCrIw_I5gq8jjIoEJMxfQ&usqp=CAU";
     }
-    
-
   }
+  
 
  
 
