@@ -1,1 +1,5 @@
-<p>diretiva-nd-style works!</p>
+<h1>Exemplo ngStyle</h1>
+<div class="change" [ngStyle]="{'border-radius': radius + 'px'}"></div>
+
+<button [disabled]="radius >= 150" (click)="redondo()"> Redondo</button>
+<button [disabled]="radius <= 0" (click)="quadrado()"> Quadrado</button>

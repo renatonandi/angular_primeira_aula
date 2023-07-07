@@ -1,0 +1,27 @@
+.change {
+    background-color: darkblue;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    border: 2px solid black;
+
+}
+
+button:disabled {
+    background-color: transparent;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}

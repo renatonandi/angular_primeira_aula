@@ -1,1 +1,12 @@
-<p>diretiva-nd-switch works!</p>
+<h1>Seleciona Carro</h1>
+<div>
+    <input type="search" [(ngModel)]="valorSelecionado" placeholder="Digite um numero" />
+    <div [ngSwitch]="valorSelecionado">
+        <p *ngSwitchCase="1"> <img src="https://cdn.ligadosgames.com/imagens/octane-1-cke.jpg" alt=""></p>
+        <p *ngSwitchCase="2"> <img
+                src="https://static-assets-prod-origin.epicgames.com/help/pt-BR/rocket-league-c5719357623323/conceitos-basicos-c7261959845275/attachments/7988573335579"
+                alt="" width="500px"></p>
+        <p *ngSwitchDefault> Nenhum carro para esse numero</p>
+    </div>
+
+</div>

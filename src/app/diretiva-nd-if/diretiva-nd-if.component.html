@@ -1,1 +1,46 @@
-<p>diretiva-nd-if works!</p>
+<main class="content">
+    <div>
+        <div class="form">
+            <h1>
+                IMC
+            </h1>
+            <p>
+                <label for="txtNome">Nome: </label>
+                <input type="text" id="txtNome" name="txtNome" [(ngModel)]="nome">
+            </p>
+
+            <button (click)="desabilitaSexo()"> Desabilitar Gênero</button>
+
+            <fieldset *ngIf="escolha">
+                <legend>Escolha o Sexo</legend>
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="sexo" id="masculino" value="m" [(ngModel)]="sexo" />
+                <label for="feminino">Feminino</label>
+                <input type="radio" name="sexo" id="feminino" value="f" [(ngModel)]="sexo" />
+            </fieldset>
+
+            <div>
+                <label for="txtPeso">Peso: </label>
+                <input type="number" id="txtPeso" name="txtPeso" [(ngModel)]="peso" />
+                <p>{{peso}}</p>
+                <label for="txtAltura">Altura: </label>
+                <input type="double" id="txtAltura" name="txtAltura" [(ngModel)]="altura">
+                <p>{{altura}}</p>
+
+            </div>
+            <div id="button">
+                <button *ngIf="escolha" [disabled]="peso==0 || peso==null || altura==0 || altura==null || sexo=='' || nome == ''"
+                    (click)="calculaImc()">Calcula IMC</button>
+                <button *ngIf="!escolha" [disabled]="peso==0 || peso==null || altura==0 || altura==null || nome == ''" (click)="calculaImc()"> Calcula IMC</button>
+            </div>
+            <div>
+                <p>Nome: {{nome}}</p>
+                <p>Calculo IMC: {{imc}}</p>
+                <p>{{resultado}}</p>
+                <img [src]="imagem" alt="">
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</main>

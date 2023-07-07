@@ -9,6 +9,7 @@ import { DiretivaNdForComponent } from './diretiva-nd-for/diretiva-nd-for.compon
 import { DiretivaNdSwitchComponent } from './diretiva-nd-switch/diretiva-nd-switch.component';
 import { DiretivaNdPipesComponent } from './diretiva-nd-pipes/diretiva-nd-pipes.component';
 import { DiretivaNdMicrowaveComponent } from './diretiva-nd-microwave/diretiva-nd-microwave.component';
+import { DiretivaNgClassComponent } from './diretiva-ng-class/diretiva-ng-class.component';
 
 const routes: Routes = [
   { path: 'bindings', component: ExemploBindingComponent},
@@ -18,8 +19,10 @@ const routes: Routes = [
   { path: 'if', component: DiretivaNdIfComponent},
   { path: 'for', component: DiretivaNdForComponent},
   { path: 'switch', component: DiretivaNdSwitchComponent},
-  { path: 'pips', component: DiretivaNdPipesComponent},
-  { path: 'microwave', component: DiretivaNdMicrowaveComponent}
+  { path: 'pipe', component: DiretivaNdPipesComponent},
+  { path: 'microwave', component: DiretivaNdMicrowaveComponent},
+  { path: 'class', component: DiretivaNgClassComponent}
+
 
 ];
 

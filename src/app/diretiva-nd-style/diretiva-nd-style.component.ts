@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretiva-nd-style.component.scss']
 })
 export class DiretivaNdStyleComponent {
+  public radius: number = 50;
 
+  redondo() {
+    this.radius += 10;
+  }
+
+  quadrado() {
+    this.radius -= 10;
+  }
 }

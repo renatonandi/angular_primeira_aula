@@ -1,1 +1,10 @@
-<p>diretiva-nd-for works!</p>
+<h1>Lista de Times</h1>
+
+<div class="menu">
+    <ul>
+        <li *ngFor="let time of times">
+            {{ time.nome }} - Vitórias: {{ time.vitorias }}
+            <button (click)="adicionarVitoria(time)">Adicionar Vitória</button>
+        </li>
+    </ul>
+</div>

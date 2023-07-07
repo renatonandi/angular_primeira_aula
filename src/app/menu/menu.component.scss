@@ -1,5 +1,6 @@
 .linkSelected {
     font-weight: bold;
+    text-align: left;
 }
 
 a:link,
@@ -18,19 +19,10 @@ a:active {
     border-radius: 3px;
 }
 
-#menu {
-    width: 0px;
-    position: fixed;
-    top: 150px;
-    color: white;
-    
-    
-}
-
 #menu-lateral {
-    position: relative;
+    position: fixed;
     width: 150px;
-    height: 300px;
+    height: 360px;
     background: #001458;
     border-radius: 0px 20px 20px 0px;
     left: -150px;
@@ -39,6 +31,8 @@ a:active {
 
 .titulo {
     text-align: center;
+    color: white;
+    margin-top: 5px;
 }
 
 input:checked~#menu-lateral {
@@ -46,26 +40,25 @@ input:checked~#menu-lateral {
     transition: 0.5s;
 }
 
-input:checked{
+input:checked {
     margin-left: 150px;
     transition: 0.5s;
 }
-
-
 
 .checkbox {
     width: 25px;
     height: 35px;
     appearance: none;
-    border-radius:0px 20px 20px 0px;
-    background-color:#001458;
-    transition:0.5s;
-    box-shadow: 10px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: #001458;
+    transition: 0.5s;
     cursor: pointer;
-  }
-
-.checkbox:checked {
-    border-radius: 20px 0px 0px 20px; 
 }
 
+.checkbox:checked {
+    border-radius: 20px 0px 0px 20px;
+}
 
+ul {
+    list-style: none;
+}

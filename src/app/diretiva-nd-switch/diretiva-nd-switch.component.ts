@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretiva-nd-switch.component.scss']
 })
 export class DiretivaNdSwitchComponent {
+  valorSelecionado!: number;
+
 
 }
