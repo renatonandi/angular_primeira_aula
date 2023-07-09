@@ -1,1 +1,36 @@
-<p>diretiva-nd-microwave works!</p>
+<h1>Microondas App</h1>
+
+
+<div class="microwave-container">
+    <div class="microwave-display">
+        {{ formatTime(timer) }}
+    </div>
+    <div class="microwave-keypad">
+        <div class="keypad-row">
+            <div class="keypad-number" (click)="addNumber(1)">1</div>
+            <div class="keypad-number" (click)="addNumber(2)">2</div>
+            <div class="keypad-number" (click)="addNumber(3)">3</div>
+        </div>
+        <div class="keypad-row">
+            <div class="keypad-number" (click)="addNumber(4)">4</div>
+            <div class="keypad-number" (click)="addNumber(5)">5</div>
+            <div class="keypad-number" (click)="addNumber(6)">6</div>
+        </div>
+        <div class="keypad-row">
+            <div class="keypad-number" (click)="addNumber(7)">7</div>
+            <div class="keypad-number" (click)="addNumber(8)">8</div>
+            <div class="keypad-number" (click)="addNumber(9)">9</div>
+        </div>
+        <div class="keypad-row">
+            <div class="keypad-empty"></div>
+            <div class="keypad-number" (click)="addNumber(0)">0</div>
+            <div class="keypad-empty"></div>
+        </div>
+        <div class="keypad-row" *ngIf="!isRunning">
+            <button class="start-button" (click)="startTimer(timer)">Start</button>
+        </div>
+        <div class="keypad-row" *ngIf="isRunning">
+            <button class="start-button" (click)="stopTimer()">Stop</button>
+        </div>
+    </div>
+</div>

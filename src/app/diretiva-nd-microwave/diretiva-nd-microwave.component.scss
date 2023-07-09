@@ -1,0 +1,77 @@
+h1 {
+    text-align: center;
+  }
+  
+  .microwave-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .microwave-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .microwave-keypad {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .keypad-row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .keypad-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 18px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .keypad-number:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .keypad-empty {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+  }
+  
+  .start-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .start-button:hover {
+    background-color: #0056b3;
+  }
