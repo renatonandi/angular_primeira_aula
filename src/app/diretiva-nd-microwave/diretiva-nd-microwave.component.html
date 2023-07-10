@@ -3,9 +3,13 @@
 
 <div class="microwave-container">
     <div class="microwave-display">
-        {{ formatTime(timer) }}
+        {{ formatTime(minutes) }}:{{ formatTime(seconds) }}
     </div>
     <div class="microwave-keypad">
+        <div class="microwave-plusspad">
+            <div class="keypad-pluss" (click)="addTime(10)"> +10</div>
+            <div class="keypad-pluss" (click)="addTime(60)"> +1:00</div>
+        </div>
         <div class="keypad-row">
             <div class="keypad-number" (click)="addNumber(1)">1</div>
             <div class="keypad-number" (click)="addNumber(2)">2</div>
@@ -22,15 +26,11 @@
             <div class="keypad-number" (click)="addNumber(9)">9</div>
         </div>
         <div class="keypad-row">
-            <div class="keypad-empty"></div>
             <div class="keypad-number" (click)="addNumber(0)">0</div>
-            <div class="keypad-empty"></div>
         </div>
-        <div class="keypad-row" *ngIf="!isRunning">
-            <button class="start-button" (click)="startTimer(timer)">Start</button>
-        </div>
-        <div class="keypad-row" *ngIf="isRunning">
-            <button class="start-button" (click)="stopTimer()">Stop</button>
+        <div class="keypad-row">
+            <button [disabled]="isRunning==true || seconds == 0 && minutes == 0" class="button" (click)="startTimer()">Start</button>
+            <button [disabled]="seconds == 0 && minutes == 0" class="button" (click)="stopTimer()">Stop</button>
         </div>
     </div>
 </div>

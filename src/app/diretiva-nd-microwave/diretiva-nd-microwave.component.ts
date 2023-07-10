@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-diretiva-nd-microwave',
@@ -8,45 +7,58 @@ import { interval } from 'rxjs';
 })
 export class DiretivaNdMicrowaveComponent {
 
-  timer: number = 0;
-
+  minutes: number = 0;
+  seconds: number = 0;
   isRunning: boolean = false;
-
   interval: any;
 
   addNumber(number: number) {
-    this.timer = this.timer * 10 + number;
-  }
-  stopTimer() {
-    clearInterval(this.interval);
-    this.isRunning = false;
-    this.timer = 0;
+    if (!this.isRunning) {
+      this.seconds = this.seconds * 10 + number;
+      
+      if (this.seconds >= 60) {
+        this.minutes += Math.floor(this.seconds / 60);
+        this.seconds %= 60;
+      }
+    }
   }
 
-  startTimer(timeInSeconds: number) {
-    if (!this.isRunning && timeInSeconds > 0) {
-      this.timer = timeInSeconds;
+  addTime(number: number) {
+    this.seconds = this.seconds + number;
+    if (this.seconds >= 60) {
+      this.minutes += Math.floor(this.seconds / 60);
+      this.seconds %= 60;
+    }
+  }
+
+  startTimer() {
+    if (!this.isRunning) {
       this.isRunning = true;
 
       this.interval = setInterval(() => {
-        this.timer--;
-        if (this.timer <= 0) {
+        if (this.seconds > 0) {
+          this.seconds--;
+        } else if (this.minutes > 0) {
+          this.minutes--;
+          this.seconds = 59;
+        }
+        if (this.minutes == 0 && this.seconds == 0) {
           this.stopTimer();
         }
       }, 1000);
     }
   }
 
-  formatTime(timeInSeconds: number): string {
-    const minutes = Math.floor(timeInSeconds / 60);
-    const seconds = timeInSeconds % 60;
-    return `${minutes}:${this.padNumber(seconds)}`;
+  stopTimer() {
+    clearInterval(this.interval);
+    this.isRunning = false;
+    this.minutes = 0;
+    this.seconds = 0;
   }
 
-  padNumber(number: number): string {
-    return number.toString().padStart(2, '0');
+  formatTime(value: number) {
+    return value.toString().padStart(2, '0');
   }
 
- 
 
 }
