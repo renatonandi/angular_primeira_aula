@@ -14,11 +14,12 @@ export class DiretivaNdMicrowaveComponent {
 
   addNumber(number: number) {
     if (!this.isRunning) {
-      this.seconds = this.seconds * 10 + number;
-      
-      if (this.seconds >= 60) {
-        this.minutes += Math.floor(this.seconds / 60);
-        this.seconds %= 60;
+      if (this.minutes < 100) {
+        this.seconds = this.seconds * 10 + number;
+        if (this.seconds >= 60) {
+          this.minutes += Math.floor(this.seconds / 60);
+          this.seconds %= 60;
+        }
       }
     }
   }
@@ -32,7 +33,7 @@ export class DiretivaNdMicrowaveComponent {
   }
 
   startTimer() {
-    if (!this.isRunning) {
+    if (!this.isRunning ) {
       this.isRunning = true;
 
       this.interval = setInterval(() => {
@@ -57,8 +58,6 @@ export class DiretivaNdMicrowaveComponent {
   }
 
   formatTime(value: number) {
-    return value.toString().padStart(2, '0');
+      return value.toString().padStart(2, '0');
   }
-
-
 }
