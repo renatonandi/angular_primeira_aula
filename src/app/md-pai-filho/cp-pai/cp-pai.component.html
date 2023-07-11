@@ -1,0 +1,16 @@
+<h1>Componente pai</h1>
+
+<div>
+    <p>Marca:</p>
+    <input [(ngModel)]="carro.marca" type="text">
+</div>
+<div>
+    <p>Ano:</p>
+    <input [(ngModel)]="carro.ano" type="number" >
+</div>
+<div>
+    <p>Cor:</p>
+    <input [(ngModel)]="carro.cor" type="color">
+</div>
+
+<app-cp-filho [carroFilho]="carro"></app-cp-filho>

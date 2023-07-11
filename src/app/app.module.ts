@@ -16,6 +16,10 @@ import { DiretivaNdSwitchComponent } from './diretiva-nd-switch/diretiva-nd-swit
 import { DiretivaNdPipesComponent } from './diretiva-nd-pipes/diretiva-nd-pipes.component';
 import { DiretivaNdMicrowaveComponent } from './diretiva-nd-microwave/diretiva-nd-microwave.component';
 import { MenuComponent } from './menu/menu.component';
+import { MdPaiFilhoModule } from './md-pai-filho/md-pai-filho.module';
+import { MdFilhoPaiModule } from './md-filho-pai/md-filho-pai.module';
+import { MdServiceModule } from './md-service/md-service.module';
+import { MdAtvModuloModule } from './md-atv-modulo/md-atv-modulo.module';
 
 
 
@@ -38,7 +42,11 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MdPaiFilhoModule,
+    MdFilhoPaiModule,
+    MdServiceModule,
+    MdAtvModuloModule
   ],
   providers: [],
   bootstrap: [AppComponent]

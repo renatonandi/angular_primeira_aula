@@ -1,0 +1,11 @@
+<legend>Lista de Pessoas</legend>
+<table>
+    <thead>
+        <th>Nome</th>
+        <th>Idade</th>
+    </thead>
+    <tr *ngFor="let pessoa of lista" (click)="carregaPessoa(pessoa)">
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.preco}}</td>
+    </tr>
+</table>

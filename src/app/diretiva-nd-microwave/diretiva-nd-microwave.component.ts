@@ -46,7 +46,7 @@ export class DiretivaNdMicrowaveComponent {
         if (this.minutes == 0 && this.seconds == 0) {
           this.stopTimer();
         }
-      }, 1000);
+      }, 500);
     }
   }
 

@@ -10,6 +10,10 @@ import { DiretivaNdSwitchComponent } from './diretiva-nd-switch/diretiva-nd-swit
 import { DiretivaNdPipesComponent } from './diretiva-nd-pipes/diretiva-nd-pipes.component';
 import { DiretivaNdMicrowaveComponent } from './diretiva-nd-microwave/diretiva-nd-microwave.component';
 import { DiretivaNgClassComponent } from './diretiva-ng-class/diretiva-ng-class.component';
+import { CpPaiComponent } from './md-pai-filho/cp-pai/cp-pai.component';
+import { CpPaiComponent as CpPaiComponent2} from './md-filho-pai/cp-pai/cp-pai.component';
+import { CpAgrupadorComponent } from './md-service/cp-agrupador/cp-agrupador.component';
+import { CpTelaComponent } from './md-atv-modulo/cp-tela/cp-tela.component';
 
 const routes: Routes = [
   { path: 'bindings', component: ExemploBindingComponent},
@@ -21,7 +25,11 @@ const routes: Routes = [
   { path: 'switch', component: DiretivaNdSwitchComponent},
   { path: 'pipe', component: DiretivaNdPipesComponent},
   { path: 'microwave', component: DiretivaNdMicrowaveComponent},
-  { path: 'class', component: DiretivaNgClassComponent}
+  { path: 'class', component: DiretivaNgClassComponent},
+  { path: 'pai_filho', component: CpPaiComponent},
+  { path: 'filho_pai', component: CpPaiComponent2},
+  { path: 'service', component: CpAgrupadorComponent},
+  { path: 'tela', component: CpTelaComponent}
 
 
 ];
