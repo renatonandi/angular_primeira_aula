@@ -9,9 +9,9 @@ import { TelaServiceService } from '../services/tela-service.service';
 export class CpTableComponent implements OnInit{
   public lista: Array<{nome: string, idade: number}> = [];
 
-  constructor(private service: TelaServiceService){}
+  constructor(private service: TelaServiceService) { }
   
-  carregaMedicamento(pessoa: any) {
+  carregaPessoa(pessoa: any) {
     this.service.carregaPessoa(pessoa)
   }
 

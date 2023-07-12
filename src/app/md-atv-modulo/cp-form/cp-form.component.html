@@ -1,11 +1,11 @@
-<h1>Form</h1>
+<legend>Cadastro de Usuarios:</legend>
 <div>
-    <label>Nome:</label>
-    <input type="text" [(ngModel)]="usuario.nome">
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" id="nome" [(ngModel)]="listaUsuario.nome">
 </div>
 <div>
-    <label>Idade:</label>
-    <input type="number" [(ngModel)]="usuario.idade">
+    <label for="valor">Idade: </label>
+    <input type="number" name="idade" id="idade" [(ngModel)]="listaUsuario.idade">
 </div>
-<button class="btn-submit btn-hover" (click)="addItem(usuario)" >Submit</button>
-
+<button (click)="addItem(listaUsuario)"
+    [disabled]="listaUsuario.nome == '' || listaUsuario.idade == null">Cadastrar</button>

@@ -4,29 +4,29 @@ import { EventEmitter, Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TelaServiceService {
+
   public emitEvent = new EventEmitter();
 
-  private lista: Array<{nome: string, idade: number}> = [];
+  private lista: Array<{ nome: string, idade: number }> = [];
 
   private pessoa = {
-    nome: '',
+    nome: "",
     idade: null
   }
 
-  public getLista(){
+  public getLista() {
     return this.lista;
   }
+
   public carregaPessoa(pessoa: any) {
     this.pessoa.nome = pessoa.nome;
     this.pessoa.idade = pessoa.idade;
     this.emitEvent.emit(this.pessoa)
-    console.log(pessoa)
   }
 
-  public adiciona(pessoa: any){
-    this.lista.push(pessoa);
-    this.emitEvent.emit(pessoa);
-}
+  public adiciona(valor: any) {
+    this.lista.push(valor);
+  }
 
   constructor() { }
 }
