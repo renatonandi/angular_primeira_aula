@@ -1,0 +1,16 @@
+table{
+    width: 100%;
+    text-align: center;
+}
+
+tr td{
+    width: 30%;
+    text-align: center;
+}
+
+tr{
+    cursor: pointer;
+    &:hover {
+        background-color: beige;
+    }
+}

@@ -17,6 +17,11 @@ export class CpTableComponent implements OnInit{
 
   ngOnInit(): void {
     this.lista = this.service.getLista();
+    this.service.emitEvent.subscribe({
+      next: (res: any) => this.lista = res
+    })
   }
+
+
 
 }

@@ -35,5 +35,10 @@ export class CpFormComponent implements OnInit{
     return this.service.adiciona(lista)
   }
 
+  public removeAll(){
+    this.service.removeAll;
+  }
+
+  
 
 }

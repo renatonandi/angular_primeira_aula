@@ -28,5 +28,10 @@ export class TelaServiceService {
     this.lista.push(valor);
   }
 
+  public removeAll(){
+    this.lista = [];
+    this.emitEvent.emit
+  }
+
   constructor() { }
 }
